@@ -1,0 +1,152 @@
+<?php
+
+namespace ParkinkBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Place
+ *
+ * @ORM\Table(name="place")
+ * @ORM\Entity(repositoryClass="ParkinkBundle\Repository\Place1Repository")
+ */
+class Place1 {
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="type", type="string", length=255)
+     */
+    private $type;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="etat", type="string", length=255)
+     */
+    private $etat;
+    
+     /**
+     * @var string
+     *
+     * @ORM\Column(name="tarif", type="integer")
+     */
+    private $tarif;
+    
+    
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="string", length=255)
+     */
+    private $description;
+
+    /**
+     * @ORM\OneToOne(targetEntity="ParkinkBundle\Entity\Image",cascade={"persist"})
+     */
+    private $image;
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId() {
+        return $this->id;
+    }
+
+    /**
+     * Set type
+     *
+     * @param string $type
+     * @return Place
+     */
+    public function setType($type) {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return string 
+     */
+    public function getType() {
+        return $this->type;
+    }
+
+    /**
+     * Set etat
+     *
+     * @param string $etat
+     * @return Place
+     */
+    public function setEtat($etat) {
+        $this->etat = $etat;
+
+        return $this;
+    }
+
+    /**
+     * Get etat
+     *
+     * @return string 
+     */
+    public function getEtat() {
+        return $this->etat;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     * @return Place
+     */
+    public function setDescription($description) {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string 
+     */
+    public function getDescription() {
+        return $this->description;
+    }
+
+    /**
+     * Set statut
+     *
+     * @param string $statut
+     * @return Place
+     */
+    public function setStatut($statut) {
+        $this->statut = $statut;
+
+        return $this;
+    }
+
+    /**
+     * Get statut
+     *
+     * @return string 
+     */
+    public function getStatut() {
+        return $this->statut;
+    }
+
+}

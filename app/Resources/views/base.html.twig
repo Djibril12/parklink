@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}ParkLink{% endblock %}</title>
+    
+    {% javascripts '@ParkinkBundle/Resources/views/public/js/*' %}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+    
+    {% stylesheets '@bootstrap_lib'
+                   '@ParkinkBundle/Resources/views/public/css/*' %}
+        <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+    {% endstylesheets %}    
+   
+    <!--<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCLRv1hP6rpPjm-rRbCMR5txC_A2pjCalA"></script> -->
+    <style>
+        .modal-header, h4, .close {
+            background-color: #5cb85c;
+            color:white !important;
+            text-align: center;
+            font-size: 30px;
+        }
+        .modal-footer {
+            background-color: #f9f9f9;
+        }
+  </style>
+  </head>
+  <body class="container">
+    <header class="w3-container top">
+        <a class="parklink-logo" href="#">ParkLink</a>
+        <div class="w3-right toptext w3-wide">SITE DE RESERVATION DE PARKING</div>
+    </header>
+      
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <ul class="nav navbar-nav">
+            <li><a href="/index" class="topnav-icons fa fa-home w3-left" title="Home"></a></li>
+            <li><a href="#">Trouver un parking</a></li> 
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+              {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                   <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Mon compte</a></li>
+                   <li><a href="{{ path('fos_user_security_logout') }}"><span class="glyphicon glyphicon-user"></span> Se Déconnecter</a></li>    
+              {% else %}
+                   <li><a href="{{ path('fos_user_security_login') }}"><span class="glyphicon glyphicon-user"></span> Se connecter</a></li>
+                   <li><a href="{{ path('fos_user_registration_register') }}"><span class="glyphicon glyphicon-log-in"></span> Créer un compte</a></li>
+              {% endif %}
+          </ul>
+        </div>
+    </nav>
+      
+    {% block body %} {% endblock %}
+    
+    <div></div>
+    
+    <footer id="footer" class="vspace20">
+        <div id="pieddepage" class="hidden-print">
+            <div id="pied" class="container">
+                <div class="visible-lg-block">
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                             <div class="row">
+                                <div class="col-md-3">
+                                  <p class="uppercase text-left"> A PROPOS DE NOUS</p>
+                                  <p> Fondateur</p>
+                                  <p> Informations sur l'entreprise</p>
+                                  <p> Métiers</p>
+                                  <p> Recrutement</p>
+                                </div>
+               
+                                <div class="col-md-3">
+                                  <p class="uppercase text-left">ADRESSE</p>
+                                  <p> 120 rue de Ville 75000</p>
+
+                                </div>
+                                <div class="col-md-3">
+                                  <p class="uppercase text-left">CONTACT</p>
+                                  <p> contact@parklink.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>	
+    
+  </body>
+</html>

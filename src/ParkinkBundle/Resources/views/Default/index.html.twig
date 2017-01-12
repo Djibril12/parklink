@@ -1,0 +1,51 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <div>
+        <p>
+            Nous sommes à la page d'accueil du site de reservation de parking
+        </p>
+    </div>
+    <div class="container-fluid">
+            <ul class="row">
+                {% for place in places %}
+                        <li class="col-md-5 col-lg-offset-1">
+                            <div>
+                                <img src="{{ asset(place.image.webPath) }}" alt="image" width="250" height="150">
+                            </div>    
+                            <div>
+                                <h4>{{ place.id }}</h4>
+                                <p>{{ place.tarif }} €</p>
+                                <a class="btn btn-primary" href="{{ path('parking_homepage', { 'id' : place.id }) }}">Plus d'infos</a>
+                                {% if panier[place.id] is not defined %}
+                                    <a class="btn btn-success" href="{{ path('panier_ajouter', { 'id' : place.id }) }}">Réserver la place</a>
+                                {% endif %}
+                            </div>      
+                        </li>
+                    
+                    {%else%}
+                        
+                        <li>Désolé, aucune place n'est disponible en ce moment </li>
+                        
+                {% endfor %}
+            </ul>
+     
+        
+    </div>
+    <div>
+        <ul class="pagination col-md-offset-4">
+            <li class="disabled"><span>Précédent</span></li>
+            <li class="disabled"><span>1</span></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">Suivant</a></li>
+        </ul>
+    </div> 
+{% endblock %}
+
+{% block javascripts %}
+
+
+{% endblock %}

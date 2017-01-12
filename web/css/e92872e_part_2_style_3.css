@@ -1,0 +1,485 @@
+body {
+	padding-bottom: 40px;
+    padding-top: 60px;
+}
+
+/*
+ maps
+*/
+
+    
+    #panel {
+      position: absolute;
+      top: 5px;
+      left: 50%;
+      margin-left: -180px;
+      z-index: 5;
+      background-color: #fff;
+      padding: 5px;
+      border: 1px solid #999;
+    }
+/*
+ barre de navigation 
+*/
+.w3-navbar
+{
+    list-style-type:none;margin:0;padding:0;overflow:hidden
+}
+.topnav {
+  position:relative;
+  z-index:2;
+  font-size: 17px;
+  background-color:#5f5f5f;
+  color:#f1f1f1;
+  width:100%;
+  padding:0;
+  letter-spacing:1px;
+}
+.topnav a{
+  padding:10px 15px 9px 15px !important;
+  display:inline-block;
+}
+.topnav {
+  background-color:#000000;
+  color:#ffffff;
+}
+.topnav a.active {
+  background-color:#73AD21;
+  background-color:#4CAF50;  
+  color:#ffffff;
+}
+a.topnav-icons {
+  width:52px;
+  font-size:20px !important;
+  padding-top:11px !important;
+  padding-bottom:13px !important;
+}
+a.topnav-icons.fa-home {
+  font-size:22px !important;
+}
+a.topnav-localicons {
+  font-size:20px !important;
+  padding-top:6px !important;
+  padding-bottom:12px !important;
+}
+
+.formulaire
+{
+    border: 1px gray solid;
+    width: 300px;
+    background-color: #f7f7f7;
+}
+#btEnregistrer
+{
+    width:50%;
+    margin:auto;
+}
+
+#container{
+  width: 100%;
+  height: 600px;
+  
+}
+
+aside{
+  float: left;
+  width: 15%;
+  height: 100%;
+  background: #2c3e50;
+}
+
+#contenu{
+  float: left;
+  width: 85%;
+  height: 100%;
+  background: url(../images/main-background1.jpg)
+}
+
+#login{
+  width: 250px;
+  height: 250px;
+  margin-left: 42%;
+  margin-top: 15%;
+  float: left;
+  padding: 10px;
+  background: #2c3e50;
+  border-radius: 8px;
+  color: white;
+}
+
+ul{
+  list-style-type: none;
+}
+
+li{
+  font-size: 117%;
+  padding: 15px 0px 15px 0px;
+}
+ a{
+   color: #bdc3c7 !important;
+ }
+
+
+
+
+#identite{
+  width: 60%;
+  height: 400px;
+  float: left;
+  background: red;
+  margin-top: 100px;
+  background: #2c3e50;
+  margin-left: 20%;
+}
+
+#idpix{
+  margin-left: 10%;
+  margin-top: 105px;
+  border-radius: 180px;
+  float: left;
+}
+
+#info{
+  width: 54%;
+  height: 300px;
+  background: #34495e;
+  margin-left: 40%;
+  margin-top: 45px;
+  padding: 25px;
+}
+
+#infobis{
+  font-size: 160%;
+  margin-left: 10%;
+  color:#bdc3c7;
+}
+
+#infobis div{
+  margin-top: 10px;
+}
+
+#nextreservation{
+  width: 50%;
+  background: #2c3e50;
+  margin-top: 50px;
+  margin-left: 5%;
+  padding: 5px 20px 5px 20px;
+  color: #bdc3c7 !important;
+  float: left;
+}
+
+caption{
+  color: #bdc3c7 !important;
+}
+
+#reservation{
+  /*width: 400px;
+  height: 515px;
+  margin-right: 5%;
+  margin-top: 50px;
+  float: right;
+  background: #2c3e50;
+  color: #bdc3c7 !important;
+  padding: 0px 16px 16px 16px;
+  */
+  
+  width: 70%;
+  background: #2c3e50;
+  margin-top: 50px;
+  margin-left: 5%;
+  padding: 5px 20px 5px 20px;
+  color: #bdc3c7 !important;
+  float: left;
+}
+
+#resform{
+  margin-top: 50px;
+}
+#hour{
+  width: 45px !important;
+}
+
+#date{
+  width: 150px;
+}
+
+#historique{
+  width: 50%;
+  background: #2c3e50;
+  margin-top: 80px;
+  margin-left: 5%;
+  padding: 5px 20px 5px 20px;
+  color: #bdc3c7 !important;
+  float: left;
+}
+
+#lastform{
+  margin-bottom: 30px;
+}
+
+#updateform{
+  margin-top: 20px;
+}
+
+#modification{
+  width: 250px;
+  height: 515px;
+  margin-top: 50px;
+  margin-left: 37%;
+  background: #2c3e50;
+  color: #bdc3c7 !important;
+  padding: 0px 16px 16px 16px;
+}
+
+
+div.top {
+    padding-top: 20px;
+    
+}
+.top{
+    position: relative;
+    background-color: white;
+    height: 68px;
+    padding-top: 20px;
+    line-height: 50px;
+    overflow: hidden;
+    z-index: 1;
+}
+footer {
+    position: relative;
+    background-color: white;
+    border: 1px solid black;
+    bottom:-200px;
+    z-index: 1;
+}
+.content-body-index
+{
+    padding: 20px;
+}
+.form-connexion
+{
+    /*border: 1px solid black;*/
+    width: 300px;
+}
+.w3-container {
+    padding: 0.01em 16px;
+}
+
+.w3-right {
+    float: right;
+}
+.w3-wide {
+    letter-spacing: 4px;
+}
+
+.parklink-logo:link, .w3-logo:visited {
+    text-decoration: none;
+}
+.parklink-logo {
+    font-family: fontawesome;
+    text-decoration: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 37px;
+    letter-spacing: 3px;
+    color: #555555;
+    display: block;
+    position: absolute;
+    top: 17px;
+    padding-left: 2px;
+}
+a {
+    background-color: transparent;
+}
+div {
+    display: block;
+    
+}
+div#recherche input[type=text] {
+    width: 89.5%;
+    border-right: 0px none;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+#recherche {
+    position: relative;
+    left: 300px;
+    border: 1px solid blue;
+    
+}
+
+
+div#message_search {
+    position: relative;
+    left: 300px;
+    border: 1px solid orange;
+    margin-top: 100px;
+    padding-left: 50px;
+    width: 400px;
+    font-size: 16px;
+  
+}
+
+#googleMap{
+    position: relative;
+    width:930px;
+    height:350px;
+    border: 1px solid black;
+    
+    left: 10px;
+    top: 50px;
+    border: 1px solid black;
+}
+
+
+
+/*
+
+NOUVEAU STYLE 
+
+*/
+
+a{
+    cursor: pointer;
+}
+/* ENTETE */
+
+div#entete{
+    float:left;
+    height:162px;
+    margin:0 0 16px 0;
+}
+div#entete div#logo{
+    float:left;
+    width:228px;
+    height:97px;
+    padding:59px 0 0 0;
+}
+div#entete div#pub{
+    float:left;
+    width:727px;
+    height:108px;
+    padding:19px 0 0 0;
+}
+
+
+input.form-control {
+    border-radius:6px;
+}
+/* BARRE */
+
+.w95 {
+    padding-left:30px;
+    padding-right:30px;
+}
+
+div#recherche {
+    width:68%;
+    /*height:34px;*/
+    margin-right:0px;
+    padding-right:0px;
+}
+.header_search > .row {
+    margin-left:0px;
+    margin-right:0px;
+}
+.header_search > .row > div:last-child {
+    padding-right:0px;
+}
+.header_search > .row > div#recherche > form > .row > div:first-child {
+    padding-left:0px;
+}
+
+.header_search > .row > div#recherche > form > .row > div:last-child {
+    padding-left:0px;
+}
+
+.bt_search {
+    width:37px;
+}
+
+
+
+#precedent_3 {
+    margin-left:-38px;
+}
+
+div#recherche input[type=text]{
+    width:89.5%;
+    border-right:0px none;
+    border-top-right-radius:0px;
+    border-bottom-right-radius:0px;
+}
+
+div#recherche select {
+    width:100%;
+    /*margin-left:2%;*/
+}
+
+div#recherche img {
+    margin-left:-4px;
+    border-radius:6px;
+    border-left:0px none;
+    border-top-left-radius:0px;
+    border-bottom-left-radius:0px;
+    padding-top:2px;
+    padding-bottom:2px;
+/*    border-color:#ccc;
+    border:1px solid;
+    box-shadow:inset 0 1px 1px rgba(0,0,0,.075);*/
+}
+
+
+div#compte{
+    /*width:30.5%;*/
+    height:34px;
+    color:#ffffff;
+    background-color:#393939;
+    border-radius:6px;
+}
+div#compte a{
+    color:#ffffff;
+    font-weight:bold;
+}
+div#compte {color:#2088ca;}
+div#compte ul{
+    float:right;
+    height:34px;
+    width:100%;
+    margin-bottom:0px;
+/*    padding:10px 15px 0 15px;*/
+}
+div#compte ul li{
+    float:left;
+    line-height:34px;
+    height:34px;
+    display:block;
+}
+div#compte ul li a {
+    height:34px;
+    line-height:34px;
+    }
+div#compte ul li.nom{
+    width:60%;
+    font-weight:normal;
+/*    line-height:14px;*/
+}
+div#compte ul li.message{
+/*    line-height:14px;*/
+    width:20%;
+}
+div#compte ul li.message img{
+/*    padding:0 10px 0 0;
+    vertical-align:bottom;*/
+}
+div#compte ul li.deco{
+    width:20%;
+    /*margin:-2px 0 0 0;*/
+}
+div#compte ul li img {
+    height:16px;
+    vertical-align: middle;
+    margin-top:-5px;
+}

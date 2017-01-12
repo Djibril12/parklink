@@ -1,0 +1,69 @@
+{% extends "::base.html.twig" %}
+
+
+{% set totalTTC = 0%}
+
+{% block body %}
+<div class="container">
+    <div class="row"> 
+        <div class="span9">
+            
+            {% for flashMessage in app.session.flashbag.get('success') %}
+                <div class="alert alert-success">
+                    {{ flashMessage }}
+                </div>
+            {% endfor %}
+            
+            <h2>Votre panier</h2>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Références</th>
+                        <th>Quantité</th>
+                        <th>Prix unitaire</th>
+                        <th>Total TTC</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if places|length == 0 %}
+                        <tr>
+                            <td colspan="4"><center>Aucune place dans votre panier</center></td>
+                        </tr>
+                    {% endif %}
+                     {% for place in places %}
+                    <tr>
+                        <form action="{{ path('panier_ajouter', { 'id' : place.id }) }}" method="get">
+                            <td>{{ place.etat }}</td>
+                            <td>
+                                <select name="qte" class="span1" onChange="this.form.submit()">
+                                    {% for i in 1..10 %}
+                                        <option value="{{ i }}" {% if i == panier[place.id] %} selected="selected" {% endif %}>{{ i }}</option>
+                                    {% endfor %}
+                                </select>&nbsp;
+                                <a href="{{ path('panier_supprimer', { 'id' : place.id }) }}"><span class="glyphicon glyphicon-trash"></span></a>
+                            </td>
+                            <td>{{ place.tarif }} €</td>
+                            <td>{{ place.tarif * panier[place.id] }} €</td>
+                        </form>
+                    </tr>
+                    
+                    {% set totalTTC = totalTTC + (place.tarif * panier[place.id]) %}
+                    
+                    {% endfor %}
+                    
+                </tbody>
+            </table>
+            {% if places|length != 0 %}
+            <dl class="dl-horizontal pull-right">
+                
+                <dt>Total TTC :</dt><dd>{{ totalTTC }} €</dd>
+            </dl>
+            <div class="clearfix"></div>
+            <a href="{{ path('panier') }}" class="btn btn-success pull-right">Valider mon panier</a>
+            {% endif %}
+            <a href="{{ path('parking_home') }}" class="btn btn-primary">Continuer mes achats</a>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
